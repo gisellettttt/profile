@@ -139,8 +139,8 @@ body.night-mode p {
 
 /* make text and image containers side by side */
 .main-text, .main-pic {
-  flex: 1;                    /* each takes equal space */
-  max-width: 600px;           /* prevents them from getting too wide */
+  flex: 1;                   
+  max-width: 600px;        
 }
 
 /* DAY background images (default) */
