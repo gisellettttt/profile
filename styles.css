@@ -1,0 +1,390 @@
+/* basic setup */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #c1e8f4;
+  transition: all 0.3s ease;
+}
+
+/* night mode */
+body.night-mode {
+  background: #1a1a2e;
+  font-family: 'DynaPuff', cursive;
+  color: #e0e0e0;
+}
+
+body.night-mode .nav {
+  background: #16213e;
+}
+
+body.night-mode .logo {
+  color: #9d4edd;
+}
+
+body.night-mode .menu-link {
+  color: #e0e0e0;
+}
+
+body.night-mode .night-btn {
+  background: #9d4edd;
+  color: white;
+}
+
+body.night-mode h1 {
+  color: #9d4edd;
+}
+
+body.night-mode p {
+  color: #e0e0e0;
+}
+
+/* navigation bar */
+.nav {
+  background: #c1e8f4;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.nav-box {
+  max-width: 1300px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #4bb5e6;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* menu styles */
+.menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 30px;
+}
+
+.menu-link {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 10px;
+}
+
+.menu-link:hover {
+  color: #f77062;
+}
+
+/* night mode button */
+.night-btn {
+  background: #ffd0e1;
+  color: #910035;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+}
+
+.night-btn:hover {
+  background: #4837ff;
+  color: white;
+}
+
+/* bigger button for main page */
+.big-btn {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* main content - FULL SCREEN BACKGROUND */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;        /* centers content vertically */
+  justify-content: center;    /* centers content horizontally */
+}
+
+.main-box {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 50px 30px;
+  display: flex;              /* changed from grid to flex for better centering */
+  align-items: center;        /* centers content vertically */
+  justify-content: center;    /* centers content horizontally */
+  gap: 40px;
+  
+  /* background image settings - 100vw */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* make text and image containers side by side */
+.main-text, .main-pic {
+  flex: 1;                    /* each takes equal space */
+  max-width: 600px;           /* prevents them from getting too wide */
+}
+
+/* DAY background images (default) */
+.home-box {
+  background-image: url('images/melody.jpg');
+}
+
+.about-box {
+  background-image: url('images/melody.jpg');
+}
+
+.hobbies-box {
+  background-image: url('images/melody.jpg');
+}
+
+/* NIGHT background images - 100vw (same settings as day) */
+body.night-mode .home-box {
+  background-image: url('images/kuromi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.night-mode .about-box {
+  background-image: url('images/kuromi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.night-mode .hobbies-box {
+  background-image: url('images/kuromi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* text boxes on images */
+.main-text, .main-pic {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 40px;
+  border-radius: 15px;
+}
+
+body.night-mode .main-text,
+body.night-mode .main-pic {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.main-text h1 {
+  font-size: 4rem;
+  color: #196dad;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.main-text p {
+  font-size: 1.5rem;
+  color: black;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* about page list */
+.bio-list {
+  margin-top: 30px;
+  list-style: none;
+}
+
+.bio-list li {
+  font-size: 1.3rem;
+  margin: 15px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* picture styles - empty image placeholders */
+.main-pic {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img {
+  width: 300px;              /* fixed width for empty images */
+  height: 300px;             /* fixed height for empty images */
+  background: #ddd;          /* light gray background for empty images */
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* empty image text (will show until you add real images) */
+.profile-img::after {
+  content: "🖼️ Image Here";
+}
+
+.pic-caption {
+  margin-top: 10px;
+  font-style: italic;
+  color: #666;
+}
+
+body.night-mode .pic-caption {
+  color: #b0b0b0;
+}
+
+/* hobbies page specific styles */
+.day-hobbies, .night-hobbies {
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.night-hobbies {
+  display: none; /* hidden by default */
+}
+
+/* show night hobbies when night mode is on */
+body.night-mode .day-hobbies {
+  display: none;
+}
+
+body.night-mode .night-hobbies {
+  display: block;
+}
+
+.hobby-list {
+  list-style: none;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.hobby-list li {
+  font-size: 1.2rem;
+  margin: 5px;
+  padding: 8px 15px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  display: inline-block;
+}
+
+/* night mode hobby list styles */
+body.night-mode .hobby-list li {
+  background: rgba(157, 78, 221, 0.3);
+  color: #e0e0e0;
+}
+
+/* headings for day/night sections */
+.day-hobbies h2, .night-hobbies h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #196dad;
+  text-align: center;
+}
+
+body.night-mode .day-hobbies h2,
+body.night-mode .night-hobbies h2 {
+  color: #9d4edd;
+}
+
+/* mobile menu button */
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+}
+
+/* mobile styles */
+@media screen and (max-width: 760px) {
+  .menu-btn {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #131313;
+    flex-direction: column;
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .main-box {
+    flex-direction: column;    /* stack on mobile */
+    padding: 30px 20px;
+    gap: 20px;
+  }
+
+  .main-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .main-text p {
+    font-size: 1.2rem;
+  }
+
+  .profile-img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-text h1 {
+    font-size: 2rem;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hobby-list li {
+    font-size: 1rem;
+    padding: 6px 12px;
+  }
+}
