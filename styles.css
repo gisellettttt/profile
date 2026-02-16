@@ -145,34 +145,34 @@ body.night-mode p {
 
 /* DAY background images (default) */
 .home-box {
-  background-image: url('images/melody.jpg');
+  background-image: url('melody.jpg');
 }
 
 .about-box {
-  background-image: url('images/melody.jpg');
+  background-image: url('melody.jpg');
 }
 
 .hobbies-box {
-  background-image: url('images/melody.jpg');
+  background-image: url('melody.jpg');
 }
 
 /* NIGHT background images - 100vw (same settings as day) */
 body.night-mode .home-box {
-  background-image: url('images/kuromi.jpg');
+  background-image: url('kuromi.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.night-mode .about-box {
-  background-image: url('images/kuromi.jpg');
+  background-image: url('kuromi.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 body.night-mode .hobbies-box {
-  background-image: url('images/kuromi.jpg');
+  background-image: url('kuromi.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -229,9 +229,9 @@ body.night-mode .main-pic {
 }
 
 .profile-img {
-  width: 300px;              /* fixed width for empty images */
-  height: 300px;             /* fixed height for empty images */
-  background: #ddd;          /* light gray background for empty images */
+  width: 300px;              
+  height: 300px;     
+  background: #ddd;  
   border-radius: 10px;
   display: flex;
   align-items: center;
